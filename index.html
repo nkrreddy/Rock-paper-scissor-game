@@ -40,7 +40,13 @@
         localStorage.removeItem('score');
         updateScore();
      ">Reset score</button>
-     <button class="auto-paly" onclick="
+     <button class="auto-play" onclick="
+         const a=document.querySelector('.auto-play').innerHTML;
+        if(a === 'Auto Play'){
+            document.querySelector('.auto-play').innerHTML =`Stop` ;
+        }else{
+            document.querySelector('.auto-play').innerHTML =`Auto Play` ;
+        }
      autoPlay();
      "
      >Auto Play</button>
